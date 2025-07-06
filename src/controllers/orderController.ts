@@ -12,7 +12,7 @@ export async function createOrder(req: Request, res: Response) {
     }
 
     const db = await readDB();
-    const newOrder: Order = { id: uuidv4(), ...data };
+    const newOrder: Order = { id: uuidv4(), ...data,  created_at: new Date().toISOString() };
     db.orders.push(newOrder);
     await writeDB(db);
 

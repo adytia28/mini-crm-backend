@@ -1,5 +1,5 @@
 export function isValidCustomer(data: any): boolean {
-  return data.name && data.email && data.phone;
+  return data.name && data.email && data.phone && data.phone.length > 8;
 }
 
 export function isValidOrder(data: any): boolean {

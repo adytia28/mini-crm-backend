@@ -3,4 +3,5 @@ export interface Customer {
   name: string;
   email: string;
   phone: string;
+  created_at:string;
 }

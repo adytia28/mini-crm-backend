@@ -1,4 +1,72 @@
 {
-  "customers": [],
-  "orders": []
+  "customers": [
+    {
+      "id": "bfe7bebe-af5b-4a54-adbd-8a167985ba43",
+      "name": "Adytia Nugraha Siregar",
+      "email": "adytia.learning@gmail.com",
+      "phone": "085358063330",
+      "created_at": "2025-07-06T00:02:36.612Z"
+    },
+    {
+      "id": "bfaffb4e-4781-4e10-93c9-0630e3ae76ce",
+      "name": "Mawar Alvionita Juliati Purba",
+      "email": "mawar.alvionita321@gmail.com",
+      "phone": "085358063331",
+      "created_at": "2025-07-06T00:08:50.310Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "832467b4-ed41-4b3d-aab3-6b1d0e483002",
+      "customer_id": "bfaffb4e-4781-4e10-93c9-0630e3ae76ce",
+      "items": [
+        {
+          "name": "Juice Jeruk",
+          "qty": 4,
+          "price": 12000,
+          "total": 48000
+        },
+        {
+          "name": "Juice Alpukat",
+          "qty": 3,
+          "price": 15000,
+          "total": 45000
+        },
+        {
+          "name": "Nasi Goreng",
+          "qty": 1,
+          "price": 25000,
+          "total": 25000
+        },
+        {
+          "name": "Juice Buah Naga",
+          "qty": 2,
+          "price": 18000,
+          "total": 36000
+        }
+      ],
+      "total_price": 154000,
+      "created_at": "2025-07-06T00:52:03.993Z"
+    },
+    {
+      "id": "5bf41d0d-a740-432c-8935-8dc00e00fbdf",
+      "customer_id": "bfe7bebe-af5b-4a54-adbd-8a167985ba43",
+      "items": [
+        {
+          "name": "Kopi",
+          "qty": 2,
+          "price": 12000,
+          "total": 24000
+        },
+        {
+          "name": "Es Teh",
+          "qty": 4,
+          "price": 7000,
+          "total": 28000
+        }
+      ],
+      "total_price": 52000,
+      "created_at": "2025-07-06T00:52:05.993Z"
+    }
+  ]
 }

@@ -12,7 +12,25 @@ export const createCustomer = async (req: Request, res: Response) => {
     }
 
     const db = await readDB();
-    const newCustomer: Customer = { id: uuidv4(), ...data };
+
+     // Cek email dan phone sudah ada atau belum
+    const emailExists = db.customers.some(
+      (customer: Customer) => customer.email === data.email
+    );
+
+    const phoneExists = db.customers.some(
+      (customer: Customer) => customer.phone === data.phone
+    );
+
+    if (emailExists && phoneExists) {
+      return res.status(409).json({ message: 'Email and phone number sudah terdaftar' });
+    } else if (emailExists) {
+      return res.status(409).json({ message: 'Email sudah terdaftar' });
+    } else if (phoneExists) {
+      return res.status(409).json({ message: 'Phone number sudah terdaftar' });
+    }
+
+    const newCustomer: Customer = { id: uuidv4(), ...data,  created_at: new Date().toISOString() };
     db.customers.push(newCustomer);
     await writeDB(db);
 
