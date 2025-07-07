@@ -23,11 +23,11 @@ export const createCustomer = async (req: Request, res: Response) => {
     );
 
     if (emailExists && phoneExists) {
-      return res.status(409).json({ message: 'Email and phone number sudah terdaftar' });
+      res.status(409).json({ message: 'Email and phone number sudah terdaftar' });
     } else if (emailExists) {
-      return res.status(409).json({ message: 'Email sudah terdaftar' });
+      res.status(409).json({ message: 'Email sudah terdaftar' });
     } else if (phoneExists) {
-      return res.status(409).json({ message: 'Phone number sudah terdaftar' });
+      res.status(409).json({ message: 'Phone number sudah terdaftar' });
     }
 
     const newCustomer: Customer = { id: uuidv4(), ...data,  created_at: new Date().toISOString() };
