@@ -1,72 +1,107 @@
 {
   "customers": [
     {
-      "id": "bfe7bebe-af5b-4a54-adbd-8a167985ba43",
+      "id": "c0b4f3b1-475f-4450-b407-ae5479f6f2b1",
       "name": "Adytia Nugraha Siregar",
       "email": "adytia.learning@gmail.com",
       "phone": "085358063330",
-      "created_at": "2025-07-06T00:02:36.612Z"
+      "created_at": "2025-07-07T04:29:34.194Z"
     },
     {
-      "id": "bfaffb4e-4781-4e10-93c9-0630e3ae76ce",
+      "id": "479d124d-06a0-4fe5-bd8c-e7ae2827be0d",
       "name": "Mawar Alvionita Juliati Purba",
-      "email": "mawar.alvionita321@gmail.com",
+      "email": "mawar@gmail.com",
       "phone": "085358063331",
-      "created_at": "2025-07-06T00:08:50.310Z"
+      "created_at": "2025-07-07T04:30:07.033Z"
+    },
+    {
+      "id": "d8629057-45ca-4637-be60-23ad7da2a97e",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "phone": "085358063332",
+      "created_at": "2025-07-07T04:30:44.236Z"
     }
   ],
   "orders": [
     {
-      "id": "832467b4-ed41-4b3d-aab3-6b1d0e483002",
-      "customer_id": "bfaffb4e-4781-4e10-93c9-0630e3ae76ce",
-      "items": [
-        {
-          "name": "Juice Jeruk",
-          "qty": 4,
-          "price": 12000,
-          "total": 48000
-        },
-        {
-          "name": "Juice Alpukat",
-          "qty": 3,
-          "price": 15000,
-          "total": 45000
-        },
-        {
-          "name": "Nasi Goreng",
-          "qty": 1,
-          "price": 25000,
-          "total": 25000
-        },
-        {
-          "name": "Juice Buah Naga",
-          "qty": 2,
-          "price": 18000,
-          "total": 36000
-        }
-      ],
-      "total_price": 154000,
-      "created_at": "2025-07-06T00:52:03.993Z"
-    },
-    {
-      "id": "5bf41d0d-a740-432c-8935-8dc00e00fbdf",
-      "customer_id": "bfe7bebe-af5b-4a54-adbd-8a167985ba43",
+      "id": "d763fbac-6450-4e0c-839d-e247b121e372",
+      "customer_id": "d8629057-45ca-4637-be60-23ad7da2a97e",
       "items": [
         {
           "name": "Kopi",
           "qty": 2,
+          "price": 5000,
+          "total": 10000
+        },
+        {
+          "name": "Nasi Pulen",
+          "qty": 3,
+          "price": 6000,
+          "total": 18000
+        }
+      ],
+      "total_price": 28000,
+      "created_at": "2025-07-07T04:31:10.119Z"
+    },
+    {
+      "id": "6d6cc4b6-863e-4ba1-b0d5-2f9ea8bde034",
+      "customer_id": "c0b4f3b1-475f-4450-b407-ae5479f6f2b1",
+      "items": [
+        {
+          "name": "Juice Jeruk",
+          "qty": 2,
+          "price": 15000,
+          "total": 30000
+        },
+        {
+          "name": "Juice Apple",
+          "qty": 3,
+          "price": 20000,
+          "total": 60000
+        }
+      ],
+      "total_price": 90000,
+      "created_at": "2025-07-07T04:31:48.679Z"
+    },
+    {
+      "id": "a49c9d65-3f99-4103-9074-b54b420b2691",
+      "customer_id": "479d124d-06a0-4fe5-bd8c-e7ae2827be0d",
+      "items": [
+        {
+          "name": "Nasi Padang",
+          "qty": 1,
+          "price": 15000,
+          "total": 15000
+        },
+        {
+          "name": "Nasi Goreng",
+          "qty": 3,
           "price": 12000,
-          "total": 24000
+          "total": 36000
+        }
+      ],
+      "total_price": 51000,
+      "created_at": "2025-07-07T04:32:23.806Z"
+    },
+    {
+      "id": "d7feb49c-756e-4b91-8211-629431cd6398",
+      "customer_id": "479d124d-06a0-4fe5-bd8c-e7ae2827be0d",
+      "items": [
+        {
+          "name": "Es Kopyor",
+          "qty": 3,
+          "price": 13000,
+          "total": 39000
         },
         {
           "name": "Es Teh",
-          "qty": 4,
-          "price": 7000,
-          "total": 28000
+          "qty": 5,
+          "price": 8000,
+          "total": 40000
         }
       ],
-      "total_price": 52000,
-      "created_at": "2025-07-06T00:52:05.993Z"
+      "total_price": 79000,
+      "created_at": "2025-07-07T04:33:01.890Z"
     }
   ]
 }

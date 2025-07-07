@@ -8,7 +8,8 @@ export const createCustomer = async (req: Request, res: Response) => {
   try {
     const data = req.body;
     if (!isValidCustomer(data)) {
-      res.status(400).json({ message: 'Invalid order data' });
+      res.status(400).json({ message: 'Mohon input semua form dengan benar!' });
+      return;
     }
 
     const db = await readDB();
@@ -24,11 +25,16 @@ export const createCustomer = async (req: Request, res: Response) => {
 
     if (emailExists && phoneExists) {
       res.status(409).json({ message: 'Email and phone number sudah terdaftar' });
+      return;
     } else if (emailExists) {
       res.status(409).json({ message: 'Email sudah terdaftar' });
+      return;
     } else if (phoneExists) {
       res.status(409).json({ message: 'Phone number sudah terdaftar' });
+      return;
     }
+
+
 
     const newCustomer: Customer = { id: uuidv4(), ...data,  created_at: new Date().toISOString() };
     db.customers.push(newCustomer);

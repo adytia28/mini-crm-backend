@@ -8,7 +8,8 @@ export async function createOrder(req: Request, res: Response) {
   try {
     const data = req.body;
     if (!isValidOrder(data)) {
-      res.status(400).json({ message: 'Invalid order data' });
+      res.status(400).json({ message: 'Mohon input semua form benar!' });
+      return;
     }
 
     const db = await readDB();
@@ -19,6 +20,7 @@ export async function createOrder(req: Request, res: Response) {
     res.status(201).json(newOrder);
   } catch (err) {
     res.status(500).json({ message: 'Internal Server Error' });
+    return;
   }
 }
 
